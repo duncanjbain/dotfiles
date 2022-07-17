@@ -14,16 +14,10 @@ sudo apt-get install -y \
   less \
   wget \
   unzip \
-  apt-transport-https \
-  lsb-release 
 
 # Install & Configure Zsh
 if [ "$INSTALL_ZSH" = "true" ]
 then
-    sudo apt-get install -y \
-    fonts-powerline \
-    zsh
-
     chsh -s /usr/bin/zsh $USERNAME
     wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k

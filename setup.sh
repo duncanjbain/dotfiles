@@ -4,17 +4,6 @@ export DEBIAN_FRONTEND=noninteractive
 export INSTALL_ZSH=true
 export USERNAME=`whoami`
 
-sudo apt-get update
-sudo apt-get -y install --no-install-recommends apt-utils dialog 2>&1
-sudo apt-get install -y \
-  curl \
-  git \
-  sudo \
-  openssh-client \
-  less \
-  wget \
-  unzip \
-
 # Install & Configure Zsh
 if [ "$INSTALL_ZSH" = "true" ]
 then
